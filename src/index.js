@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Gallery from "./Page/Gallery";
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom'; // Added BrowserRouter alias
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router> {/* Added Router component */}
+      <Gallery />
+    </Router>
   </React.StrictMode>
 );
 
